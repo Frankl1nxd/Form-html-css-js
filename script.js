@@ -1,5 +1,5 @@
 document.getElementById("registroForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Evita el envío del formulario
+  
 
   // Obtener valores
   const nombre = document.getElementById("nombre").value.trim();
