@@ -8,6 +8,7 @@ document.getElementById("registroForm").addEventListener("submit", function(even
 
   // Validaciones
   if (!nombre || !correo || !edad) {
+    event.preventDefault();
     mensaje.textContent = "Por favor, completa todos los campos.";
     mensaje.style.color = "red";
     return;
@@ -15,6 +16,7 @@ document.getElementById("registroForm").addEventListener("submit", function(even
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(correo)) {
+    event.preventDefault();
     mensaje.textContent = "Por favor, ingresa un correo válido.";
     mensaje.style.color = "red";
     return;
@@ -22,6 +24,7 @@ document.getElementById("registroForm").addEventListener("submit", function(even
 
   const edadNum = parseInt(edad);
   if (isNaN(edadNum) || edadNum < 18 || edadNum > 99) {
+    event.preventDefault();
     mensaje.textContent = "La edad debe estar entre 18 y 99 años.";
     mensaje.style.color = "red";
     return;
