@@ -104,7 +104,7 @@ input:-webkit-autofill:focus {
 }
 
 
-.mensaje {
+.error, .exito {
     margin-top: 20px;
     text-align: center;
     font-size: 1rem;
@@ -114,12 +114,12 @@ input:-webkit-autofill:focus {
     border-radius: 6px;
 }
 
-.mensaje.error {
+.error {
     color: #b30000;
     background-color: #ffe5e5;
 }
 
-.mensaje.exito {
+.exito {
     color: #007e00;
     background-color: #e4ffe4;
 }
